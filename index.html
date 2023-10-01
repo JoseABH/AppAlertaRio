@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="src/js/main.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>App Alerta del Rio</title>
+</head>
+<body>
+    
+        <main>
+            <header>
+                <h1>Alerta de Desbordamiento de Rio</h1>
+                <button id="alertab" type="button" onclick="reproducirSonido()"></button>
+
+            </header>
+            <div id="contenedor1">
+
+                <h1>NIVEL MAS ALTO</h1>
+                <div id="locacion">
+                    <h3 id="lugar">Locación 1</h3>
+                </div>
+                <div id="let">
+                    <div id="alerta"></div>
+                </div>
+                
+                    
+                <div id="nivel">
+                    <H2 id="NivelActualizado">Nivel   </H2>
+                </div>
+
+                <div id="ubicacion">
+                    <h3 id="horaActualizada">Ultima Actualizacion: 00:00:00</h3>
+                </div>
+                
+            </div>
+
+            <div id="contenedor2">
+                <a class="botones" href="src/html/nivelUbicacion.html">Nivel por Ubicación</a>
+                <a class="botones" href="src/html/historial.html">Historiales de Niveles del Rio</a>
+                <a class="botones" href="src/html/acercade.html">Acerca de..</a>
+                <a class="botones" href="#">Riesgo de Desbordamiento e indicaciones</a>
+
+            </div>
+            <div id="contenedorAlerta">
+                <div id="mainAlerta">
+                    <h1>Alerta PELIGRO<i class="bi bi-moisture"></i>
+                        <i class="bi bi-water"></i>
+                    </h1>
+                    <i class="bi bi-exclamation-triangle-fill"></i>
+                    <h3 id="cuentaRegresiva"></h3>
+                    
+                    <h2><i class="bi bi-megaphone-fill"></i> No corra y alejese a un lugar seguro.</h2>
+                    <button onclick="salir()" type="button">Detener</button>
+                    <audio id="alertSound" preload="auto" style="display:none">
+                        <source src="src/audio/AlertaVDR.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            
+            </div>
+            
+        </main>
+
+
+
+
+
+        <!-- <h1>${item.date}</h1>
+        <p>${item.time}</p>
+        <p>${item.waterLevel}</p>
+        <p>${item.location}</p> -->
+    </div>
+</body>
+</html>
