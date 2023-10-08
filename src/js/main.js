@@ -1,6 +1,4 @@
 
-
-
 function reproducirSonido() {
     var audio = document.getElementById("alertSound");
     audio.play();
@@ -64,7 +62,6 @@ function regresiva() {
 
 
 
-
 // // Obtiene la URL completa del documento actual
  const url = window.location.href;
 
@@ -74,30 +71,37 @@ function regresiva() {
 // // Verifica si el HTML actual es el que queremos
  if (pathname[pathname.length - 1] === 'historial.html') {
 
+   
 
 
     //========================== Inicio para busqueda de la tabla de historial ==========================
     function buscar() {
         const input = document.querySelector('#texbus').value.toLowerCase().replace(/\s+/g, '');
         const rows = document.querySelectorAll('tbody tr');
-
+        let totalFilasMostradas = 0; // Variable para llevar el total de filas mostradas
+    
         rows.forEach(row => {
             let encontrado = false;
-
+    
             row.querySelectorAll('td').forEach(cell => {
                 const contenido = cell.textContent.toLowerCase().replace(/\s+/g, '');
                 if (contenido.includes(input)) {
                     encontrado = true;
                 }
             });
-
+    
             if (encontrado) {
                 row.style.display = '';
+                totalFilasMostradas++; // Incrementa el contador de filas mostradas
             } else {
                 row.style.display = 'none';
             }
         });
+    
+        // Actualiza el total de filas mostradas
+        document.getElementById("total-filas").textContent = totalFilasMostradas;
     }
+    
     //========================== Inicio para busqueda de la tabla de historial ==========================
 
     fetch('https://back-pzj5-dev.fl0.io/data')
@@ -124,22 +128,20 @@ function regresiva() {
 
             document.querySelector('tbody').innerHTML = html;
         });
+
+        
+
     //========================== Final para llenar la tabla de historial ==========================
-
-
-
 }
 
-
-
-if (pathname[pathname.length - 1] === 'index.html') {
+if (pathname[pathname.length - 1] === 'Principal.html' || pathname[pathname.length - 1] === 'Principal.html#') {
 
     async function fetchDataAndDisplay() {
         try {
             // Hacer la solicitud a la API
             const respuesta = await fetch('https://back-pzj5-dev.fl0.io/data');
             const data = await respuesta.json();
-
+            
             // Filtrar y encontrar los datos más recientes de cada ubicación
             const locations = ['Tokio', 'Londres, Reino Unido', 'São Paulo, Brasil'];
             const latestEntries = [];
@@ -152,7 +154,9 @@ if (pathname[pathname.length - 1] === 'index.html') {
                     });
                     latestEntries.push(latestEntry);
                 }
-            });
+               
+
+            }); 
 
             // Encontrar el dato con el nivel de agua más alto
             const highestWaterLevelEntry = latestEntries.reduce((prev, current) => {
@@ -161,7 +165,7 @@ if (pathname[pathname.length - 1] === 'index.html') {
 
             // Mostrar los datos en la página HTML
             
-            const locacion = document.getElementById('lugar');
+                    const locacion = document.getElementById('lugar');
                     locacion.innerHTML = highestWaterLevelEntry.location;
             
                     const nivel = document.getElementById('NivelActualizado');
@@ -182,11 +186,10 @@ if (pathname[pathname.length - 1] === 'index.html') {
                     ubicacion.innerHTML = "Ultima Actualizacion: "+highestWaterLevelEntry.time;
 
 
-
-
         } catch (error) {
             console.error('Error al obtener los datos:', error);
         }
+       
     }
 
     // Llamar a la función inicialmente
