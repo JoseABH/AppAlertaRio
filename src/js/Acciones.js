@@ -26,7 +26,7 @@ function inicio() {
     let contrasena = document.getElementById("Contraseña");
     let contraseña = contrasena.value;
 
-    fetch("/src/js/login.json")
+    fetch("src/js/login.json")
         .then(function (response) {
             return response.json();
         })
