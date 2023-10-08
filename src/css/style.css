@@ -536,3 +536,10 @@ tr:hover {
         font-size: 1rem;
     }
 }
+
+@media (max-height: 600px){
+    body{
+       overflow: auto;
+    }
+    
+}
