@@ -1,5 +1,7 @@
 body {
     display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     overflow: hidden;
     margin: 0;
@@ -9,7 +11,24 @@ body {
     flex-direction: column;
 }
 
+#louder{
+    display: none;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 12px solid rgb(225, 225, 225);
+    border-radius:50%;
+    border-right-color: rgb(0, 172, 120);
+    animation: spin 1s ease infinite;
+    z-index: 1;
+}
 
+@keyframes spin{
+    100%{
+        transform: rotate(360deg);
+    }
+
+}
 #alerta{
     
     top: 10%;
@@ -72,8 +91,6 @@ body {
   height: 80vh;
   justify-content: center;
   align-items: center;
-  
-  
 }
 
 #Contenido{
@@ -176,12 +193,13 @@ body {
             margin: 0;
             padding: 0;
             bottom: 0;
+            background-image: url(/src/img/FondoAgua.png);
             background-repeat: round;
             animation: rio 15s infinite;
             z-index: -1;
         }
         
-        @keyframes rio {
+        /* @keyframes rio {
             0%{
                 transform: scale(1);
             }
@@ -191,6 +209,19 @@ body {
             75%{
                 transform: scale(1.4,1.5);
             }
+            100%{
+                transform: scale(1);
+            }
+        } */
+
+        @keyframes rio {
+            0%{
+                transform: scale(1);
+            }
+            50%{
+                transform: scale(1,2);
+            }
+           
             100%{
                 transform: scale(1);
             }

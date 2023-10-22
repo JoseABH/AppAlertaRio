@@ -126,6 +126,10 @@
     {
       "cedula": "503690687",
       "nombre": "ING. JOSE BENAVIDES"
+    },
+    {
+      "cedula": "admin12345",
+      "nombre": "ADMINISTRADOR"
     }
   ]
   

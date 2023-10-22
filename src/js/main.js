@@ -143,8 +143,9 @@ if (pathname[pathname.length - 1] === 'Principal.html' || pathname[pathname.leng
             const data = await respuesta.json();
             
             // Filtrar y encontrar los datos más recientes de cada ubicación
-            const locations = ['Tokio', 'Londres, Reino Unido', 'São Paulo, Brasil'];
+            const locations = ['Londres, Reino Unido', 'São Paulo, Brasil'];
             const latestEntries = [];
+           
 
             locations.forEach(location => {
                 const filteredData = data.filter(item => item.location === location);
@@ -175,10 +176,13 @@ if (pathname[pathname.length - 1] === 'Principal.html' || pathname[pathname.leng
                     
                     if (highestWaterLevelEntry.waterLevel === 1) {
                         alerta.style.backgroundColor = "rgb(24, 206, 0)";
+                        alerta.style.boxShadow = " inset 0 0 20px rgba(0, 46, 210, 0.73)"
                     } else if (highestWaterLevelEntry.waterLevel === 2) {
                         alerta.style.backgroundColor = "rgb(237, 170, 0)";
+                        alerta.style.boxShadow = "inset 0 0 20px rgb(202, 81, 0)"
                     } else if (highestWaterLevelEntry.waterLevel === 3) {
                         alerta.style.backgroundColor = "rgb(243, 0, 0)";
+                        alerta.style.boxShadow = "inset 0 0 30px rgba(0, 0, 0, 0.829)"
                     }
                     
             
@@ -253,3 +257,26 @@ if (pathname[pathname.length - 1] === 'Principal.html' || pathname[pathname.leng
 // setInterval(fetchDataByLocationAndDate, 5000); // 5000 milisegundos = 5 segundos
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const respuesta1 = await fetch('https://back-pzj5-dev.fl0.io/data?location=S%C3%A3o%20Paulo,%20Brasil');
+//             const data = await respuesta1.json();
+
