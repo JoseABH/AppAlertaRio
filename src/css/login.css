@@ -193,7 +193,7 @@ body {
             margin: 0;
             padding: 0;
             bottom: 0;
-            background-image: url(/src/img/FondoAgua.png);
+            background-image: url('src/img/FondoAgua.png');
             background-repeat: round;
             animation: rio 15s infinite;
             z-index: -1;
