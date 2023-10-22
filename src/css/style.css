@@ -314,7 +314,7 @@ header h1{
 }
 
 #contenedor22{
-    background-image: url('src/img/FondoAgua.png');
+    background-image: url('../img/FondoAgua.png');
     height: 25%;
     margin: 0;
     padding: 0;
