@@ -1,135 +1,138 @@
 [
-    {
-      "cedula": "504490394",
-      "nombre": "NORMAN"
-    },
-    {
-      "cedula": "118750966",
-      "nombre": "HEZRON"
-    },
-    {
-      "cedula": "504560825",
-      "nombre": "JOSE ALBERTO"
-    },
-    {
-      "cedula": "504530983",
-      "nombre": "FABIOLA"
-    },
-    {
-      "cedula": "504560820",
-      "nombre": "BRANDON"
-    },
-    {
-      "cedula": "504300988",
-      "nombre": "ROBERT"
-    },
-    {
-      "cedula": "504310350",
-      "nombre": "YOILIN"
-    },
-    {
-      "cedula": "504530950",
-      "nombre": "JOAN"
-    },
-    {
-      "cedula": "504520162",
-      "nombre": "AKION"
-    },
-    {
-      "cedula": "504540920",
-      "nombre": "JUAN J"
-    },
-    {
-      "cedula": "504470808",
-      "nombre": "DIXON"
-    },
-    {
-      "cedula": "504430491",
-      "nombre": "NAZARETH"
-    },
-    {
-      "cedula": "118860626",
-      "nombre": "GENESIS"
-    },
-    {
-      "cedula": "504540953",
-      "nombre": "JOSE DAVID"
-    },
-    {
-      "cedula": "504550256",
-      "nombre": "NIXON"
-    },
-    {
-      "cedula": "117480830",
-      "nombre": "MARCO"
-    },
-    {
-      "cedula": "117490804",
-      "nombre": "JIMENA"
-    },
-    {
-      "cedula": "504550335",
-      "nombre": "GERALD"
-    },
-    {
-      "cedula": "504520960",
-      "nombre": "ERICK"
-    },
-    {
-      "cedula": "504460626",
-      "nombre": "ADRIANA"
-    },
-    {
-      "cedula": "504550568",
-      "nombre": "YEILIN"
-    },
-    {
-      "cedula": "504540418",
-      "nombre": "ALEJANDRO"
-    },
-    {
-      "cedula": "504370364",
-      "nombre": "KEIRIN"
-    },
-    {
-      "cedula": "504480290",
-      "nombre": "EMMANUEL"
-    },
-    {
-      "cedula": "504560592",
-      "nombre": "SOFIA"
-    },
-    {
-      "cedula": "703130977",
-      "nombre": "SURIAN"
-    },
-    {
-      "cedula": "504450261",
-      "nombre": "STWARD"
-    },
-    {
-      "cedula": "504510677",
-      "nombre": "JOSE PABLO"
-    },
-    {
-      "cedula": "504470474",
-      "nombre": "NAILA"
-    },
-    {
-      "cedula": "118560004",
-      "nombre": "SHARON"
-    },
-    {
-      "cedula": "504560557",
-      "nombre": "OSCAR"
-    },
-    {
-      "cedula": "503690687",
-      "nombre": "ING. JOSE BENAVIDES"
-    },
-    {
-      "cedula": "admin12345",
-      "nombre": "ADMINISTRADOR"
-    }
-  ]
-  
+  {
+    "cedula": "504490394",
+    "nombre": "NORMAN"
+  },
+  {
+    "cedula": "118750966",
+    "nombre": "HEZRON"
+  },
+  {
+    "cedula": "504560825",
+    "nombre": "JOSE ALBERTO"
+  },
+  {
+    "cedula": "504530983",
+    "nombre": "FABIOLA"
+  },
+  {
+    "cedula": "504560820",
+    "nombre": "BRANDON"
+  },
+  {
+    "cedula": "504300988",
+    "nombre": "ROBERT"
+  },
+  {
+    "cedula": "504310350",
+    "nombre": "YOILIN"
+  },
+  {
+    "cedula": "504530950",
+    "nombre": "JOAN"
+  },
+  {
+    "cedula": "504520162",
+    "nombre": "AKION"
+  },
+  {
+    "cedula": "504540920",
+    "nombre": "JUAN J"
+  },
+  {
+    "cedula": "504470808",
+    "nombre": "DIXON"
+  },
+  {
+    "cedula": "504430491",
+    "nombre": "NAZARETH"
+  },
+  {
+    "cedula": "118860626",
+    "nombre": "GENESIS"
+  },
+  {
+    "cedula": "504540953",
+    "nombre": "JOSE DAVID"
+  },
+  {
+    "cedula": "504550256",
+    "nombre": "NIXON"
+  },
+  {
+    "cedula": "117480830",
+    "nombre": "MARCO"
+  },
+  {
+    "cedula": "117490804",
+    "nombre": "JIMENA"
+  },
+  {
+    "cedula": "504550335",
+    "nombre": "GERALD"
+  },
+  {
+    "cedula": "504520960",
+    "nombre": "ERICK"
+  },
+  {
+    "cedula": "504460626",
+    "nombre": "ADRIANA"
+  },
+  {
+    "cedula": "504550568",
+    "nombre": "YEILIN"
+  },
+  {
+    "cedula": "504540418",
+    "nombre": "ALEJANDRO"
+  },
+  {
+    "cedula": "504370364",
+    "nombre": "KEIRIN"
+  },
+  {
+    "cedula": "504480290",
+    "nombre": "EMMANUEL"
+  },
+  {
+    "cedula": "504560592",
+    "nombre": "SOFIA"
+  },
+  {
+    "cedula": "703130977",
+    "nombre": "SURIAN"
+  },
+  {
+    "cedula": "504450261",
+    "nombre": "STWARD"
+  },
+  {
+    "cedula": "504510677",
+    "nombre": "JOSE PABLO"
+  },
+  {
+    "cedula": "504470474",
+    "nombre": "NAILA"
+  },
+  {
+    "cedula": "118560004",
+    "nombre": "SHARON"
+  },
+  {
+    "cedula": "504560557",
+    "nombre": "OSCAR"
+  },
+  {
+    "cedula": "503690687",
+    "nombre": "ING. JOSE BENAVIDES"
+  },
+  {
+    "cedula": "admin12345",
+    "nombre": "ADMINISTRADOR"
+  },
+  {
+    "cedula": "502980508",
+    "nombre": "ING. WALTER LEON"
+  }
+]

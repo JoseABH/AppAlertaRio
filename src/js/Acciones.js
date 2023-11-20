@@ -63,7 +63,7 @@ function inicio() {
                 louder.style.display = "node";
             } else if (contraseña === "") {
                 Alert("Introduzca la contraseña"+'<i class="bi bi-person-fill-exclamation"></i>',"#cc0000","1.5rem","Se requiere la contraseña","#00152e","1.2rem","Cerrar","#8b1a00","1rem");
-
+            
 
                 document.getElementById("Contraseña").style.border = "3px solid red";
             } else {
