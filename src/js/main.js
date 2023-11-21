@@ -69,9 +69,9 @@ function regresiva() {
  const pathname = url.split('/');
 
 // // Verifica si el HTML actual es el que queremos
- if (pathname[pathname.length - 1] === 'historial.html') {
+if (pathname[pathname.length - 1] === 'historial.html' || 'historialalerta.html') {
 
-   
+
 
 
     //========================== Inicio para busqueda de la tabla de historial ==========================
@@ -79,17 +79,17 @@ function regresiva() {
         const input = document.querySelector('#texbus').value.toLowerCase().replace(/\s+/g, '');
         const rows = document.querySelectorAll('tbody tr');
         let totalFilasMostradas = 0; // Variable para llevar el total de filas mostradas
-    
+
         rows.forEach(row => {
             let encontrado = false;
-    
+
             row.querySelectorAll('td').forEach(cell => {
                 const contenido = cell.textContent.toLowerCase().replace(/\s+/g, '');
                 if (contenido.includes(input)) {
                     encontrado = true;
                 }
             });
-    
+
             if (encontrado) {
                 row.style.display = '';
                 totalFilasMostradas++; // Incrementa el contador de filas mostradas
@@ -97,26 +97,26 @@ function regresiva() {
                 row.style.display = 'none';
             }
         });
-    
+
         // Actualiza el total de filas mostradas
         document.getElementById("total-filas").textContent = totalFilasMostradas;
     }
-    
-    //========================== Inicio para busqueda de la tabla de historial ==========================
 
-    fetch('https://back-pzj5-dev.fl0.io/data')
-        .then(response => response.json())
-        .then(data => {
-            const html = data.map(item => {
-                let waterLevelEmoji = '';
-                if (item.waterLevel === 1) {
-                    waterLevelEmoji = 'Nivel 1 🟢'; // Nivel 1: Verde
-                } else if (item.waterLevel === 2) {
-                    waterLevelEmoji = 'Nivel 2 🟡'; // Nivel 2: Amarillo
-                } else if (item.waterLevel === 3) {
-                    waterLevelEmoji = 'Nivel 3 🔴'; // Nivel 3: Rojo
-                }
-                return `
+    //========================== Inicio para busqueda de la tabla de historial ==========================
+    if (pathname[pathname.length - 1] === 'historial.html') {
+        fetch('https://api-rest-river-date-dev-bmke.4.us-1.fl0.io/data')
+            .then(response => response.json())
+            .then(data => {
+                const html = data.map(item => {
+                    let waterLevelEmoji = '';
+                    if (item.waterLevel === 1) {
+                        waterLevelEmoji = 'Nivel 1 🟢'; // Nivel 1: Verde
+                    } else if (item.waterLevel === 2) {
+                        waterLevelEmoji = 'Nivel 2 🟡'; // Nivel 2: Amarillo
+                    } else if (item.waterLevel === 3) {
+                        waterLevelEmoji = 'Nivel 3 🔴'; // Nivel 3: Rojo
+                    }
+                    return `
                 <tr>
                     <td>${item.date}</td>
                     <td>${item.time}</td>
@@ -124,12 +124,46 @@ function regresiva() {
                     <td>${item.location}</td>
                 </tr>
             `;
-            }).join('');
+                }).join('');
 
-            document.querySelector('tbody').innerHTML = html;
-        });
+                document.querySelector('tbody').innerHTML = html;
+            });
+    }
 
-        
+
+
+
+    if (pathname[pathname.length - 1] === 'historialalerta.html') {
+
+        fetch('https://api-rest-river-date-dev-bmke.4.us-1.fl0.io/data?waterLevel=3')
+            .then(response => response.json())
+            .then(data => {
+                const html = data.map(item => {
+                    let waterLevelEmoji = '';
+                    if (item.waterLevel === 3) {
+                        waterLevelEmoji = 'Nivel 3 🔴'; // Nivel 3: Rojo
+                    }
+                    return `
+                    <tr>
+                        <td>${item.date}</td>
+                        <td>${item.time}</td>
+                        <td>${waterLevelEmoji}</td>
+                        <td>${item.location}</td>
+                    </tr>
+                `;
+                }).join('');
+
+                document.querySelector('tbody').innerHTML = html;
+            });
+
+
+
+    }
+
+
+
+
+
 
     //========================== Final para llenar la tabla de historial ==========================
 }
@@ -139,7 +173,7 @@ if (pathname[pathname.length - 1] === 'Principal.html' || pathname[pathname.leng
     async function fetchDataAndDisplay() {
         try {
             // Hacer la solicitud a la API
-            const respuesta = await fetch('https://back-pzj5-dev.fl0.io/data');
+            const respuesta = await fetch('https://api-rest-river-date-dev-bmke.4.us-1.fl0.io/data');
             const data = await respuesta.json();
             
             // Filtrar y encontrar los datos más recientes de cada ubicación

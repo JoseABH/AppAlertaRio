@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
@@ -10,7 +11,24 @@
     <link rel="stylesheet" href="src/css/login.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <script src="src/js/Acciones.js"></script>
-    <title>Inicio de sesión</title> 
+    <title>Inicio de sesión</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Obtener los parámetros de la URL
+            const urlParams = new URLSearchParams(window.location.search);
+
+            // Obtener el valor para el campo de Contraseña desde la URL
+            const valorContraseña = urlParams.get('Contraseña');
+
+            // Rellenar el campo si se obtuvo un valor
+            if (valorContraseña !== null) {
+                document.getElementById('Contraseña').value = valorContraseña;
+            }
+        });
+
+
+
+    </script>
 </head>
 
 <body>
@@ -21,9 +39,10 @@
             <p id="parrafoAlerta">parrafoAlerta</p>
         </div>
         <div id="A2">
-            <button id="Alertabtn" onclick="Alert('INFORMACION','ParrafoAlerta')"><i class="bi bi-x-circle-fill" href="Principal.html">  Cerrar</i></button>
+            <button id="Alertabtn" onclick="Alert('INFORMACION','ParrafoAlerta')"><i class="bi bi-x-circle-fill"
+                    href="Principal.html"> Cerrar</i></button>
         </div>
-        
+
     </div>
     <div id="Contenedor">
         <div id="Contenido">
