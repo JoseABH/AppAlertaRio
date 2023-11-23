@@ -1,6 +1,6 @@
 const datosJSON = [
   {
-      "waterLevel": 3,
+      "waterLevel": 1,
       "location": "Puente 1"
   },
   {
