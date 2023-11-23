@@ -55,7 +55,7 @@ const datosJSON = [
   
   let index = 0;
   let index2 = 0; // Variable para seguir el índice del JSON
-  const intervalo = 20000; // 30 segundos en milisegundos
+  const intervalo = 15000; // 30 segundos en milisegundos
 
 
 
