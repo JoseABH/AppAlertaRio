@@ -21,13 +21,10 @@
                          
                           <button type="button"> <i class="bi bi-x-lg" onclick="menu()"></i></button>
                           <a href="Principal.html">Inicio</a>
-                          <a href="nivelUbicacion.html">Nivel por Ubicación</a>
+                          <!-- <a href="nivelUbicacion.html">Nivel por Ubicación</a> -->
                           <a href="historial.html">Historiales de Niveles del Rio</a>
                           <a href="acercade.html">Informacion del Sistema</a>
-                          <a href="">Riesgo de Desbordamiento e indicaciones</a>
-                          <a href="">....</a>
-                          <a href="">....</a>
-                          <a href="">....</a>
+                          <a href="historialalerta.html">Indicaciones e Historial de Desbordamiento</a>
                           <a href="index.html">Cerrar sesion</a>
                   
                       </div>
@@ -48,7 +45,7 @@
         
                 
                 <div class="locacion">
-                    <h3>Locación 1</h3>
+                    <h3 id="lugar1">Locación 1</h3>
                 </div>
                 <div class="let">
                     <div class="alerta" id="alerta1"></div>
@@ -56,11 +53,11 @@
         
         
                 <div class="nivel">
-                    <H2>Nivel 3</H2>
+                    <H2 id="NivelActualizado1">Nivel 3</H2>
                 </div>
         
                 <div class="ubicacion">
-                    <h3>Ultima Actualizacion: 5:34 PM</h3>
+                    <h3 id="horaActualizada1">Ultima Actualizacion: 5:34 PM</h3>
                 </div>
         
             </div>
@@ -69,7 +66,7 @@
         
                 
                 <div class="locacion">
-                    <h3>Locación 2</h3>
+                    <h3 id="lugar2">Locación 2</h3>
                 </div>
                 <div class="let">
                     <div class="alerta" id="alerta2"></div>
@@ -77,11 +74,11 @@
         
         
                 <div class="nivel">
-                    <H2>Nivel 2</H2>
+                    <H2 id="NivelActualizado2">Nivel 2</H2>
                 </div>
         
                 <div class="ubicacion">
-                    <h3>Ultima Actualizacion: 5:34 PM</h3>
+                    <h3 id="horaActualizada2">Ultima Actualizacion: 5:34 PM</h3>
                 </div>
         
             </div>
@@ -92,7 +89,26 @@
     
         <div id="contenedor22"></div>
         <a class="atras" href="Principal.html"><i class="bi bi-house-door-fill"></i></a>
-    </main>
 
+
+        <div id="contenedorAlerta">
+            <div id="mainAlerta">
+                <h1>Alerta PELIGRO<i class="bi bi-moisture"></i>
+                    <i class="bi bi-water"></i>
+                </h1>
+                <i class="bi bi-exclamation-triangle-fill"></i>
+                <h3 id="cuentaRegresiva"></h3>
+                
+                <h2><i class="bi bi-megaphone-fill"></i> No corra y alejese a un lugar seguro.</h2>
+                <button onclick="salir()" type="button">Detener</button>
+                <audio id="alertSound" preload="auto" style="display:none">
+                    <source src="src/audio/AlertaVDR.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        
+        </div>
+    </main>
+    <script src="src/js/simulacion1.js"></script>
+    <script src="src/js/simulacion2.js"></script>
 </body>
 </html>

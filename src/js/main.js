@@ -1,4 +1,5 @@
 
+
 function reproducirSonido() {
     var audio = document.getElementById("alertSound");
     audio.play();
@@ -59,6 +60,35 @@ function regresiva() {
 
     
 }
+
+ // Imprime el contenido de 'horaActualizada2'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -168,7 +198,7 @@ if (pathname[pathname.length - 1] === 'historial.html' || 'historialalerta.html'
     //========================== Final para llenar la tabla de historial ==========================
 }
 
-if (pathname[pathname.length - 1] === 'Principal.html' || pathname[pathname.length - 1] === 'Principal.html#') {
+if (pathname[pathname.length - 1] === '-Principal.html' || pathname[pathname.length - 1] === '-Principal.html#') {
 
     async function fetchDataAndDisplay() {
         try {
